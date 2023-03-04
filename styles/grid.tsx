@@ -25,8 +25,8 @@ export const GridStyle: any = createGlobalStyle`
   }
 
   .grid-container {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     max-width: 87rem;
     margin: 0 auto;
 
@@ -80,18 +80,21 @@ export const GridStyle: any = createGlobalStyle`
   }
 
   .grid-margin-x {
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
 
     > {
       .cell {
-        width: calc(100% - 2rem);
-        margin-left: 1rem;
-        margin-right: 1rem;
+        width: calc(100% - 1rem);
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
       }
 
+      .small-6 {
+        width: calc(50% - 1rem);
+      }
       .small-12 {
-        width: calc(100% - 2rem);
+        width: calc(100% - 1rem);
       }
     }
 
@@ -301,9 +304,13 @@ export const GridStyle: any = createGlobalStyle`
         }
       }
     }
+
+    .medium-offset-1 {
+      margin-left: 8.33333%;
+    }
   }
 
-  @media only screen and (min-width: 48.0625em) { //768px
+  @media only screen and (min-width: 48em) { //768px
     .grid-x {
       > {
         .large-3 {
