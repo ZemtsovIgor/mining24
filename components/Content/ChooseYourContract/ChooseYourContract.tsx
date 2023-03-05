@@ -14,7 +14,7 @@ export default function ChooseYourContract({ data }:any) {
             data.items.map((item:any) => (
               <div
                 key={Buffer.from(Math.random().toString()).toString('base64')}
-                className={`cell grid-x small-6 media-card -${item.color}`}
+                className={`cell grid-x small-6 xlarge-3 media-card -${item.color}`}
               >
                 <div className="cell media-card__content">
                   <h3 className="h3">{item.title}</h3>
@@ -23,7 +23,7 @@ export default function ChooseYourContract({ data }:any) {
                       <ul className="list">
                         {
                           item.list.map((listItem:string) => (
-                            <li className="list__item">{listItem}</li>
+                            <li className="list__item" key={Buffer.from(Math.random().toString()).toString('base64')}>{listItem}</li>
                           ))
                         }
                       </ul>

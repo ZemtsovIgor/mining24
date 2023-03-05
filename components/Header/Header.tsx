@@ -47,9 +47,9 @@ export default function Header() {
                           LOCALE_CODES.map((code: string) => (
                             <li key={code} data-value={LOCALES[code].symbol}>
                               <a className="navigation-lang__tooltip_item" href={LOCALES[code].path}>
-                                <i className={`navigation-lang__tooltip_item_icon -${code}`} />
+                                <i className={`navigation-lang__tooltip_item_flag -${code}`} />
                                 <span className="navigation-lang__tooltip_item_name" >{LOCALES[code].name}</span>
-                                <div className="navigation-lang__tooltip_item_check -checked" />
+                                <div className={`navigation-lang__tooltip_item_check ${code === loc ? '-checked' : ''}`} />
                               </a>
                             </li>
                           ))

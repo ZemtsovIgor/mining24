@@ -357,6 +357,10 @@ export const GridStyle: any = createGlobalStyle`
       margin-left: 8.33333%;
     }
 
+    .large-offset-2 {
+      margin-left: 16.66667%;
+    }
+
     .large-up-3 {
       > {
         .cell {
@@ -366,7 +370,15 @@ export const GridStyle: any = createGlobalStyle`
     }
   }
 
-  @media only screen and (min-width: 75em) { //1025px
+  @media only screen and (min-width: 74.9375em) { //1200px
+    .grid-container {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    }
+    
+    .xlarge-offset-0 {
+      margin-left: 0;
+    }
     
     .xlarge-offset-1 {
       margin-left: 8.33333%;
@@ -394,17 +406,23 @@ export const GridStyle: any = createGlobalStyle`
         .xlarge-1 {
           width: 8.33333%;
         }
+        .xlarge-2 {
+          width: 16.66667%;
+        }
         .xlarge-3 {
           width: 25%;
         }
         .xlarge-4 {
           width: 33.33333%;
         }
+        .xlarge-5 {
+          width: 41.66667%;
+        }
         .xlarge-6 {
           width: 50%;
         }
-        .xlarge-5 {
-          width: 41.66667%;
+        .xlarge-7 {
+          width: 58.33333%;
         }
         .xlarge-8 {
           width: 66.66667%;
@@ -414,6 +432,30 @@ export const GridStyle: any = createGlobalStyle`
         }
         .xlarge-11 {
           width: 91.66667%;
+        }
+      }
+    }
+
+    .grid-margin-x {
+      margin-left: -1rem;
+      margin-right: -1rem;
+
+      > {
+        .cell {
+          width: calc(100% - 2rem);
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+
+        .xlarge-3 {
+          width: calc(25% - 2rem);
+        }
+
+        .xlarge-6 {
+          width: calc(50% - 2rem);
+        }
+        .xlarge-12 {
+          width: calc(100% - 2rem);
         }
       }
     }

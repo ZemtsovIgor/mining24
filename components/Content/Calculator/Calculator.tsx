@@ -12,6 +12,8 @@ export default function Calculator({ data }:any) {
               <h2 className="h2">BTC mining contract calculator</h2>
               <p className="text">With our calculator you can calculate the potential profit of mining BTC</p>
             </div>
+          </div>
+          <div className="cell small-12 medium-12 xlarge-6">
             <div className="sliders">
               <div className="sliders__item">
                 <div className="sliders__item-title_wrap">
@@ -67,7 +69,7 @@ export default function Calculator({ data }:any) {
               </div>
             </div>
           </div>
-          <div className="cell small-12 medium-12">
+          <div className="cell small-12 medium-12 xlarge-6">
             <div className="total">
               <div className="total__title-wrap">
                 <span className="total__title">Total contract hash power</span>

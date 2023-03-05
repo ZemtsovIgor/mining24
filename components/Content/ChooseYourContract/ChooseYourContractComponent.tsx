@@ -71,6 +71,20 @@ export const ChooseYourContractComponent:any = styled('section')`
   }
 
 
-  @media only screen and (min-width: 64.0625em) { //1024px
+  @media only screen and (min-width: 74.9375em) {
+    &.choose-your-contract {
+      padding-bottom: 4.5em;
+    }
+    
+    .h2 {
+      margin-bottom: 2rem;
+    }
+    
+    .btn {
+      padding: 10px 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 `;

@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const CalculatorComponent:any = styled('section')`
-
+  &.calculator {
+    margin-bottom: 2.7em;
+  }
+  
   & .calculator {
     padding-bottom: 2.3em;
-    margin-bottom: 0;
     
     &-wrap {
       background: conic-gradient(from 237.34deg at 30.26% -12.73%, rgba(0, 250, 70, 0.13) -66.95deg, rgba(255, 255, 255, 0) 5.23deg, rgba(176, 252, 80, 0.1) 61.72deg, rgba(74, 181, 179, 0.117441) 142.5deg, rgba(0, 10, 250, 0.13) 217.5deg, rgba(0, 250, 70, 0.13) 293.05deg, rgba(255, 255, 255, 0) 365.23deg), conic-gradient(from 255.73deg at 102.25% 28.97%, rgba(0, 250, 70, 0.13) -136.87deg, rgba(255, 255, 255, 0) 5.23deg, rgba(176, 252, 80, 0.1) 61.72deg, rgba(74, 181, 179, 0.117441) 135.62deg, rgba(0, 250, 70, 0.13) 223.13deg, rgba(255, 255, 255, 0) 365.23deg), conic-gradient(from 248.53deg at 103.05% -6.34%, rgba(250, 225, 0, 0.13) -67.77deg, rgba(255, 255, 255, 0) 5.23deg, rgba(176, 252, 80, 0.1) 61.72deg, rgba(74, 181, 179, 0.117441) 135.62deg, rgba(0, 130, 250, 0.13) 244.86deg, rgba(250, 225, 0, 0.13) 292.23deg, rgba(255, 255, 255, 0) 365.23deg), #F5F9FF;
@@ -36,6 +38,10 @@ export const CalculatorComponent:any = styled('section')`
         &_wrap {
           margin-bottom: 1px;
         }
+      }
+      
+      &-slider {
+        display: none;
       }
     }
   }
@@ -156,7 +162,7 @@ export const CalculatorComponent:any = styled('section')`
   .total {
     background: rgba(255, 255, 255, 0.72);
     border-radius: 12px;
-    padding: 32px 16px;
+    padding: 32px 16px 46px 16px;
     
     &__title {
       display: block;
@@ -206,6 +212,8 @@ export const CalculatorComponent:any = styled('section')`
       }
 
       &-wrap {
+        display: flex;
+        align-items: center;
         margin-bottom: 1rem;
       }
     }
@@ -312,6 +320,8 @@ export const CalculatorComponent:any = styled('section')`
           background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC45OTk3IDEuMTdDMTAuODEyMyAwLjk4Mzc1MyAxMC41NTg5IDAuODc5MjExIDEwLjI5NDcgMC44NzkyMTFDMTAuMDMwNSAwLjg3OTIxMSA5Ljc3NzA3IDAuOTgzNzUzIDkuNTg5NyAxLjE3TDUuOTk5NyA0LjcxTDIuNDU5NyAxLjE3QzIuMjcyMzQgMC45ODM3NTMgMi4wMTg4OSAwLjg3OTIxMSAxLjc1NDcgMC44NzkyMTFDMS40OTA1MiAwLjg3OTIxMSAxLjIzNzA3IDAuOTgzNzUzIDEuMDQ5NyAxLjE3QzAuOTU1OTc2IDEuMjYyOTcgMC44ODE1ODIgMS4zNzM1NyAwLjgzMDgxMyAxLjQ5NTQzQzAuNzgwMDQ0IDEuNjE3MjkgMC43NTM5MDYgMS43NDc5OSAwLjc1MzkwNiAxLjg4QzAuNzUzOTA2IDIuMDEyMDIgMC43ODAwNDQgMi4xNDI3MiAwLjgzMDgxMyAyLjI2NDU4QzAuODgxNTgyIDIuMzg2NDQgMC45NTU5NzYgMi40OTcwNCAxLjA0OTcgMi41OUw1LjI4OTcgNi44M0M1LjM4MjY3IDYuOTIzNzMgNS40OTMyNyA2Ljk5ODEzIDUuNjE1MTMgNy4wNDg4OUM1LjczNjk5IDcuMDk5NjYgNS44Njc2OSA3LjEyNTggNS45OTk3IDcuMTI1OEM2LjEzMTcyIDcuMTI1OCA2LjI2MjQyIDcuMDk5NjYgNi4zODQyOCA3LjA0ODg5QzYuNTA2MTQgNi45OTgxMyA2LjYxNjc0IDYuOTIzNzMgNi43MDk3IDYuODNMMTAuOTk5NyAyLjU5QzExLjA5MzQgMi40OTcwNCAxMS4xNjc4IDIuMzg2NDQgMTEuMjE4NiAyLjI2NDU4QzExLjI2OTQgMi4xNDI3MiAxMS4yOTU1IDIuMDEyMDIgMTEuMjk1NSAxLjg4QzExLjI5NTUgMS43NDc5OSAxMS4yNjk0IDEuNjE3MjkgMTEuMjE4NiAxLjQ5NTQzQzExLjE2NzggMS4zNzM1NyAxMS4wOTM0IDEuMjYyOTcgMTAuOTk5NyAxLjE3WiIgZmlsbD0iIzQxNEM3OCIvPgo8L3N2Zz4K);
           background-repeat: no-repeat;
           transition: 0.5s;
+          transform: rotate(180deg);
+          margin-right: 5px;
         }
       }
 
@@ -319,9 +329,29 @@ export const CalculatorComponent:any = styled('section')`
         height: auto;
         overflow: hidden;
         font-size: initial;
-        padding-left: 1rem;
+        margin-top: 0.7rem;
         margin-bottom: 1rem;
         transition: all 0.5s ease-in-out;
+        
+        &__line {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+        }
+
+        &__text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          color: #414C78;
+        }
+
+        &__value {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          color: #414C78;
+        }
 
         p {
           margin-bottom: 1rem;
@@ -334,7 +364,7 @@ export const CalculatorComponent:any = styled('section')`
       &-col {
         &.-hidden {
           .total__details-head_icon {
-            transform: rotate(180deg);
+            transform: rotate(0deg);
           }
 
           .total__details-body {
@@ -353,6 +383,116 @@ export const CalculatorComponent:any = styled('section')`
     }
   }
 
-  @media only screen and (min-width: 64.0625em) { //1024px
+  @media only screen and (min-width: 74.9375em) {
+    
+    &.calculator {
+      margin-bottom: 4em;
+    }
+    
+    .titles {
+      padding: 2.5rem 3rem;
+    }
+
+    .sliders {
+      padding: 0 0.5rem 0 3rem;
+      margin-top: 2.2rem;
+      margin-bottom: 4rem;
+    }
+
+    .sliders__item-title_wrap {
+      margin-bottom: 3px;
+    }
+
+    .sliders__item {
+      margin-bottom: 1.8rem;
+    }
+
+    .compare {
+      padding: 0 0 0 3rem;
+      
+      &__title {
+        font-size: 24px;
+        line-height: 32px;
+        
+        &-wrap {
+          margin-bottom: 2rem;
+        }
+      }
+      
+      &__wrap {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      &__item {
+        &.-bright {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    .total {
+      margin: 0 3rem 0 2rem;
+      padding: 32px 39px 46px 39px;
+      margin-bottom: 2.5rem;
+      
+      &__title {
+        margin-bottom: 0.5rem;
+        
+        &-under {
+          font-size: 24px;
+          line-height: 32px;
+        }
+        
+        &-wrap {
+          margin-bottom: 1.5rem;
+        }
+      }
+      
+      &__bonus {
+        font-size: 24px;
+        line-height: 32px;
+        margin-right: 13px;
+        
+        &-wrap {
+          margin-bottom: 1.4rem;
+        }
+        
+        &-balloon {
+          font-size: 14px;
+          line-height: 24px;
+          padding: 4px 12px;
+        }
+      }
+      
+      &__profit {
+        font-size: 18px;
+        line-height: 24px;
+        
+        &-rating {
+          width: 88px;
+          height: 88px;
+        }
+        
+        &-items {
+          padding-top: 0.9rem;
+        }
+        
+        &-circle {
+          margin-right: 12px;
+        }
+        
+        &-wrap {
+          margin-bottom: 1.5rem;
+        }
+      }
+      
+      &__details-wrap {
+        margin-bottom: 3.3rem;
+        margin-top: 2.2rem;
+      }
+    }
   }
 `;

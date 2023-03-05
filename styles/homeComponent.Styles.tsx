@@ -69,6 +69,10 @@ export const HomeComponent:any = styled('main')`
       }
     }
   }
+  
+  .why-people-choose-us {
+    margin-bottom: 1.6rem;
+  }
 
   @media only screen and (min-width: 23.4375em) { //375px
   }
@@ -85,7 +89,43 @@ export const HomeComponent:any = styled('main')`
   @media only screen and (min-width: 64em) { //1025px
   }
 
-  @media only screen and (min-width: 80em) { //1280px
+  @media only screen and (min-width: 74.9375em) { //1200px
+    top: -6.375rem;
+    .main-slide {
+      margin-bottom: 5rem;
+    }
+    
+    .main-slide .right-side {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 11.5rem;
+    }
+
+    .main-slide .right-side .animation {
+      &-wrap {
+        margin-right: 1.2rem;
+        margin-left: 3.1rem;
+      }
+    }
+
+    .main-slide .left-side {
+      margin-top: 11.5rem;
+      
+      .h1 {
+        margin-bottom: 3.5rem;
+      }
+    }
+
+    .main-slide .left-side .btns {
+      margin-bottom: 1rem;
+      
+      .btn {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 20px 32px;
+      }
+      
+    }
   }
 
   @media only screen and (min-width: 85.3125em) { //1365px
