@@ -19,11 +19,14 @@ export default function Header() {
                 <img className="img" src="/staticfiles/images/logo.svg" alt="Mining24" />
               </a>
             </div>
-            <button
-              type="button"
+            <div
               id="mobileMenuBtn"
               className="menu-icon right"
-            />
+            >
+              <div className="x" />
+              <div className="y" />
+              <div className="z" />
+            </div>
           </nav>
           {/* Desktop */}
           <nav className="align-middle stacked-for-medium navigation--expanded top-bar" id="navigation--expanded">

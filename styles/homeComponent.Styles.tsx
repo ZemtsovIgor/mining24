@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const HomeComponent:any = styled('main')`
   position: relative;
   top: -4rem;
+  width: 100vw;
 
   section {
     margin-bottom: 2.1rem;

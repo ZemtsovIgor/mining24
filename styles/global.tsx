@@ -530,6 +530,27 @@ export const GlobalStyle: any = createGlobalStyle`
     }
   }
 
+  .is-open-right .title-bar .menu-icon {
+    width: 32px!important;
+    height: 28px!important;
+    
+    & .x {
+      top: 0!important;
+      transform: rotate(45deg);
+      transition: all 100ms ease-out;
+    }
+
+    & .y {
+      display: none!important;
+    }
+
+    & .z {
+      top: 0!important;
+      transform: rotate(135deg);
+      transition: all 100ms ease-out;
+    }
+  }
+
   .off-canvas {
     position: fixed;
     z-index: 12;
@@ -551,64 +572,30 @@ export const GlobalStyle: any = createGlobalStyle`
 
     &.is-closed {
       visibility: hidden;
+      width: 0;
     }
   }
 
   .position-right {
     top: 0;
     right: 0;
-    height: calc(100% - 4.6rem);
-    margin-top: 4.6rem;
+    height: 100vh;
     overflow-y: auto;
     width: 100vw;
     transform: translateX(100vw);
-    background: #ffffff;
+    background: #F7F7FA;
     padding: 0 1em;
-
-    a {
-      color: #434343;
-    }
   }
 
   .is-drilldown {
     position: relative;
     overflow: hidden;
-    min-height: 602.984px;
+    min-height: calc(100vh - 7.5rem);
     max-width: 100%;
-    padding: 2.2rem .7rem;
 
     li {
       display: block;
       outline: none;
-      
-      &.-active {
-        color: #000000;
-      }
-    }
-
-    a {
-      padding: .7rem 1.2rem;
-      font-weight: 600;
-      font-size: 28px;
-      line-height: 64px;
-      color: #000000;
-    }
-  }
-  
-  .mobile-trade {
-    position: relative;
-    max-width: 100%;
-    padding: 0 0.7rem;
-    margin-top: 10px;
-    .btn {
-      display: block;
-      width: 100%;
-      color: #FFFFFF;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 16px;
-      padding: 19px;
-      border-radius: 30px;
     }
   }
 

@@ -16,6 +16,7 @@ import Monitoring from "../components/Content/Monitoring/Monitoring";
 import Reviews from "../components/Content/Reviews/Reviews";
 import Faq from "../components/Content/Faq/Faq";
 import Footer from "../components/Footer/Footer";
+import MobileMenu from "../components/MobileMenu/MobileMenu";
 
 const static_data:any = {
   settings: {
@@ -256,6 +257,8 @@ export default function Home() {
       <GridStyle/>
       <GlobalStyle/>
       <Header/>
+
+      <MobileMenu />
 
       <HomeComponent>
         <section className="main-slide">

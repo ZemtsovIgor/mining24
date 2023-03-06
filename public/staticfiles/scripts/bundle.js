@@ -233,4 +233,9 @@ $(document).ready(function() {
   $('.faq-question-col').on('click', function () {
     $(this).toggleClass('-hidden');
   });
+
+  // Mobila Navigation Lang
+  $('#mobileNavigationLang').on('click', function () {
+    $(this).toggleClass('-visible');
+  });
 });
