@@ -1,5 +1,5 @@
 import {useRouter} from "next/router";
-import {DEFAULT_LANG} from "../../constants/locales.constants";
+import i18nextConfig from "../../next-i18next.config";
 import {CONTENT} from "../../constants/content.constants";
 import MainLayout from "../../components/Layouts/MainLayout/MainLayout";
 import Head from "next/head";
@@ -21,8 +21,9 @@ import Footer from "../../components/Footer/Footer";
 import React from "react";
 
 export default function Home() {
-  const { locale } = useRouter();
-  const loc: string = locale ? locale : DEFAULT_LANG;
+  const router = useRouter();
+  const loc: any = router.query.locale || i18nextConfig.i18n.defaultLocale
+  console.log('currentLocale', loc);
   const static_data:any = CONTENT[loc];
 
   return (

@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import MainLayout from "../components/Layouts/MainLayout/MainLayout";
+import MainLayout from "../../../components/Layouts/MainLayout/MainLayout";
 import Head from "next/head";
-import {GridStyle} from "../styles/grid";
-import {GlobalStyle} from "../styles/global";
-import Header from "../components/Header/Header";
+import {GridStyle} from "../../../styles/grid";
+import {GlobalStyle} from "../../../styles/global";
+import Header from "../../../components/Header/Header";
 
 const data:any = {
   settings: {

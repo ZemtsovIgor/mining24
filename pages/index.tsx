@@ -1,12 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-
-import { GridStyle } from '../styles/grid'
-import { GlobalStyle } from '../styles/global'
-import { HomeComponent } from '../styles/homeComponent.Styles';
-
-import MainLayout from '../components/Layouts/MainLayout/MainLayout';
-import Header from '../components/Header/Header';
+import {useRouter} from "next/router";
+import i18nextConfig from "../next-i18next.config";
+import {CONTENT} from "../constants/content.constants";
+import MainLayout from "../components/Layouts/MainLayout/MainLayout";
+import Head from "next/head";
+import {GridStyle} from "../styles/grid";
+import {GlobalStyle} from "../styles/global";
+import Header from "../components/Header/Header";
+import MobileMenu from "../components/MobileMenu/MobileMenu";
+import {HomeComponent} from "../styles/homeComponent.Styles";
+import MainSlide from "../components/Content/MainSlide/MainSlide";
 import ChooseYourContract from "../components/Content/ChooseYourContract/ChooseYourContract";
 import Calculator from "../components/Content/Calculator/Calculator";
 import ImageCarousel from "../components/Content/ImageCarousel/ImageCarousel";
@@ -16,19 +18,12 @@ import Monitoring from "../components/Content/Monitoring/Monitoring";
 import Reviews from "../components/Content/Reviews/Reviews";
 import Faq from "../components/Content/Faq/Faq";
 import Footer from "../components/Footer/Footer";
-import MobileMenu from "../components/MobileMenu/MobileMenu";
-import MainSlide from "../components/Content/MainSlide/MainSlide";
-import {CONTENT} from "../constants/content.constants";
-import {useRouter} from "next/router";
-import {DEFAULT_LANG} from "../constants/locales.constants";
-
+import React from "react";
 
 export default function Home() {
   const router = useRouter();
-  const { locale } = router;
-  console.log('router', router);
-  console.log('locale', locale);
-  const loc: string = locale ? locale : DEFAULT_LANG;
+  const loc: any = router.query.locale || i18nextConfig.i18n.defaultLocale
+  console.log('currentLocale', loc);
   const static_data:any = CONTENT[loc];
 
   return (

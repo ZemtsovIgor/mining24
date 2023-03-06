@@ -1,12 +1,14 @@
 import React from "react";
 import {PATHS} from "../../constants/paths.constants";
 import { MobileMenuComponent } from './MobileMenuComponent.Styles';
-import {DEFAULT_LANG, LOCALE_CODES, LOCALES} from "../../constants/locales.constants";
+import {LOCALE_CODES, LOCALES} from "../../constants/locales.constants";
 import {useRouter} from "next/router";
+import i18nextConfig from "../../next-i18next.config";
 
 export default function MobileMenu() {
-  const { locale } = useRouter();
-  const loc: string = locale ? locale : DEFAULT_LANG;
+  const router = useRouter();
+  const loc: any = router.query.locale || i18nextConfig.i18n.defaultLocale
+  console.log('currentLocale', loc);
 
   return (
     <MobileMenuComponent id="mobileMenu" className="off-canvas position-right is-transition-push is-closed">

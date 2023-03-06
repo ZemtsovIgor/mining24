@@ -53,10 +53,14 @@
     "@zeit/next-css": "^1.0.1",
     "axios": "^0.26.0",
     "clean-css": "^4.2.3",
+    "i18next": "^22.4.10",
     "next": "^12.1.0",
+    "next-i18next": "^13.2.1",
+    "next-language-detector": "^1.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "^12.2.0",
     "styled-components": "^4.3.2"
   }
 }

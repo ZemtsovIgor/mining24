@@ -17,7 +17,7 @@ export default function RatingStars({ data }:any) {
     <RatingStarsComponent className="rating-stars">
       {
         stars.map((star:number) => (
-          <div className="star">
+          <div className="star" key={Buffer.from(Math.random().toString()).toString('base64')}>
             <i className="icon-o">
               <i className="icon" style={{width: `${star}%`}} />
             </i>

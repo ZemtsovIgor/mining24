@@ -2,11 +2,15 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { HeaderComponent } from './HeaderComponent.Styles';
 import {PATHS} from "../../constants/paths.constants";
-import {DEFAULT_LANG, LOCALE_CODES, LOCALES} from "../../constants/locales.constants";
+import {LOCALE_CODES, LOCALES} from "../../constants/locales.constants";
+import LinkComponent from "../Link/Link";
+import languageDetector from '../../lib/languageDetector'
+import i18nextConfig from "../../next-i18next.config";
 
 export default function Header() {
-  const { locale } = useRouter();
-  const loc: string = locale ? locale : DEFAULT_LANG;
+  const router = useRouter();
+  const loc: any = router.query.locale || i18nextConfig.i18n.defaultLocale
+  console.log('currentLocale', loc);
 
   return (
     <HeaderComponent>
@@ -49,11 +53,15 @@ export default function Header() {
                         {
                           LOCALE_CODES.map((code: string) => (
                             <li key={code} data-value={LOCALES[code].symbol}>
-                              <a className="navigation-lang__tooltip_item" href={LOCALES[code].path}>
+                              <LinkComponent
+                                className="navigation-lang__tooltip_item"
+                                href={LOCALES[code].path}
+                                onClick={() => languageDetector.cache(code)}
+                              >
                                 <i className={`navigation-lang__tooltip_item_flag -${code}`} />
                                 <span className="navigation-lang__tooltip_item_name" >{LOCALES[code].name}</span>
                                 <div className={`navigation-lang__tooltip_item_check ${code === loc ? '-checked' : ''}`} />
-                              </a>
+                              </LinkComponent>
                             </li>
                           ))
                         }

@@ -13,6 +13,4 @@ export const LOCALES: any = {
   }
 };
 
-export const DEFAULT_LANG: string = 'en';
-
 export const LOCALE_CODES: string[] = ['en', 'ru'];
