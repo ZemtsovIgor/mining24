@@ -1,33 +1,27 @@
-import React from 'react';
-import Head from 'next/head';
-
-import { GridStyle } from '../styles/grid'
-import { GlobalStyle } from '../styles/global'
-import { HomeComponent } from '../styles/homeComponent.Styles';
-
-import MainLayout from '../components/Layouts/MainLayout/MainLayout';
-import Header from '../components/Header/Header';
-import ChooseYourContract from "../components/Content/ChooseYourContract/ChooseYourContract";
-import Calculator from "../components/Content/Calculator/Calculator";
-import ImageCarousel from "../components/Content/ImageCarousel/ImageCarousel";
-import MiningList from "../components/Content/MiningList/MiningList";
-import Partners from "../components/Content/Partners/Partners";
-import Monitoring from "../components/Content/Monitoring/Monitoring";
-import Reviews from "../components/Content/Reviews/Reviews";
-import Faq from "../components/Content/Faq/Faq";
-import Footer from "../components/Footer/Footer";
-import MobileMenu from "../components/MobileMenu/MobileMenu";
-import MainSlide from "../components/Content/MainSlide/MainSlide";
-import {CONTENT} from "../constants/content.constants";
 import {useRouter} from "next/router";
-import {DEFAULT_LANG} from "../constants/locales.constants";
-
+import {DEFAULT_LANG} from "../../constants/locales.constants";
+import {CONTENT} from "../../constants/content.constants";
+import MainLayout from "../../components/Layouts/MainLayout/MainLayout";
+import Head from "next/head";
+import {GridStyle} from "../../styles/grid";
+import {GlobalStyle} from "../../styles/global";
+import Header from "../../components/Header/Header";
+import MobileMenu from "../../components/MobileMenu/MobileMenu";
+import {HomeComponent} from "../../styles/homeComponent.Styles";
+import MainSlide from "../../components/Content/MainSlide/MainSlide";
+import ChooseYourContract from "../../components/Content/ChooseYourContract/ChooseYourContract";
+import Calculator from "../../components/Content/Calculator/Calculator";
+import ImageCarousel from "../../components/Content/ImageCarousel/ImageCarousel";
+import MiningList from "../../components/Content/MiningList/MiningList";
+import Partners from "../../components/Content/Partners/Partners";
+import Monitoring from "../../components/Content/Monitoring/Monitoring";
+import Reviews from "../../components/Content/Reviews/Reviews";
+import Faq from "../../components/Content/Faq/Faq";
+import Footer from "../../components/Footer/Footer";
+import React from "react";
 
 export default function Home() {
-  const router = useRouter();
-  const { locale } = router;
-  console.log('router', router);
-  console.log('locale', locale);
+  const { locale } = useRouter();
   const loc: string = locale ? locale : DEFAULT_LANG;
   const static_data:any = CONTENT[loc];
 
