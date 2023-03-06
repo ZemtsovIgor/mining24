@@ -143,10 +143,22 @@ export const ReviewsComponent:any = styled('section')`
       font-weight: 700;
       font-size: 18px;
       line-height: 24px;
+      width: 100%;
       
       &__wrap {
         margin-top: 1.5rem;
         text-align: center;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    & .reviews {
+      &-btn {
+        width: auto;
+        
+        &__wrap {
+        }
       }
     }
   }

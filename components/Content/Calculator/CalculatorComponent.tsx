@@ -162,7 +162,7 @@ export const CalculatorComponent:any = styled('section')`
   .total {
     background: rgba(255, 255, 255, 0.72);
     border-radius: 12px;
-    padding: 32px 16px 46px 16px;
+    padding: 32px 16px 30px 16px;
     
     &__title {
       display: block;
@@ -292,7 +292,7 @@ export const CalculatorComponent:any = styled('section')`
       list-style: none;
       
       &-wrap {
-        margin-bottom: 2.7rem;
+        margin-bottom: 1.3rem;
         margin-top: 1.8rem;
       }
 
@@ -380,6 +380,15 @@ export const CalculatorComponent:any = styled('section')`
       font-weight: 700;
       font-size: 18px;
       line-height: 24px;
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    .total {
+      padding: 32px 16px 46px 16px;
+      &__details-wrap {
+        margin-bottom: 2.7rem;
+      }
     }
   }
 

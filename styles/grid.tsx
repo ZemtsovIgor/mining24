@@ -25,8 +25,8 @@ export const GridStyle: any = createGlobalStyle`
   }
 
   .grid-container {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     max-width: 87rem;
     margin: 0 auto;
 
@@ -195,9 +195,6 @@ export const GridStyle: any = createGlobalStyle`
   @media only screen and (min-width: 23.4375em) { //375px
   }
 
-  @media only screen and (min-width: 33.75em) { //540px
-  }
-
   @media only screen and (min-width: 40.0625em) { //640px
     .flex-rows {
       .to-cols {
@@ -311,6 +308,11 @@ export const GridStyle: any = createGlobalStyle`
   }
 
   @media only screen and (min-width: 48em) { //768px
+    .grid-container {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
     .grid-x {
       > {
         .large-3 {
@@ -318,6 +320,9 @@ export const GridStyle: any = createGlobalStyle`
         }
         .large-4 {
           width: 33.33333%;
+        }
+        .large-5 {
+          width: 41.66667%;
         }
         .large-6 {
           width: 50%;

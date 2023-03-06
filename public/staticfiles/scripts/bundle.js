@@ -212,11 +212,14 @@ $(document).ready(function() {
   });
 
   new Swiper(".reviews-carousel", {
-    slidesPerView: 2.5,
+    slidesPerView: 1.4,
     loop: true,
     spaceBetween: 20,
     grabCursor: true,
     breakpoints: {
+      540: {
+        slidesPerView: 2.5,
+      },
       1024: {
         slidesPerView: 3.3,
       },

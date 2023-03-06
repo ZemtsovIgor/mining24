@@ -870,12 +870,23 @@ export const GlobalStyle: any = createGlobalStyle`
     }
   }
 
-  @media only screen and (max-width: 48.0625em) {
+  @media only screen and (max-width: 47.9375em) {
+    .btn {
+      display: block;
+      
+      &-wrap {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .social {
+      justify-content: center;
+    }
+  
     .mobile-reverse {
       flex-direction: column-reverse;
     }
-
-    
   }
 
   @media only screen and (max-width: 64.0625em) and (min-width: 40.0625em) {
@@ -918,10 +929,6 @@ export const GlobalStyle: any = createGlobalStyle`
   }
 
   @media only screen and (max-width: 64em) {
-    .grid-container {
-      padding-left: 1.6rem;
-      padding-right: 1.6rem;
-    } 
     .mobile-reverse {
       flex-direction: column-reverse;
     }

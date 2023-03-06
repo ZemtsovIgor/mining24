@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const PartnersComponent:any = styled('section')`
-  margin-bottom: 3rem;
+  &.partners {
+    margin-bottom: 3rem;
+  }
   
   & .partners {
     &-container {
@@ -24,6 +26,12 @@ export const PartnersComponent:any = styled('section')`
     
     &-image {
       width: 9rem;
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    &.partners {
+      margin-bottom: 2.1rem;
     }
   }
 

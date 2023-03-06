@@ -33,7 +33,7 @@ export const ImageCarouselComponent:any = styled('div')`
     padding: 0;
     z-index: 1;
     border-radius: 8px;
-    height: 53vh;
+    height: 14rem;
   }
 
   .slides-track {
@@ -59,7 +59,7 @@ export const ImageCarouselComponent:any = styled('div')`
   }
 
   .carousel-thumbs {
-    height: 6em;
+    height: 3.5em;
     box-sizing: border-box;
     padding-top: 12px;
     overflow: hidden;
@@ -105,6 +105,20 @@ export const ImageCarouselComponent:any = styled('div')`
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    .slides {
+      &-list {
+        height: 53vh;
+      }
+    }
+
+    .carousel {
+      &-thumbs {
+        height: 6em;
       }
     }
   }

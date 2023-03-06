@@ -26,7 +26,7 @@ export const MonitoringComponent:any = styled('section')`
       list-style: none;
       display: block;
       position: relative;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       
       &__wrap {
         padding: 0 1rem;
@@ -63,7 +63,7 @@ export const MonitoringComponent:any = styled('section')`
       
       &__wrap {
         padding: 0 1rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
       }
     }
     
@@ -79,8 +79,30 @@ export const MonitoringComponent:any = styled('section')`
         display: block;
         position: relative;
         padding: 0 1rem;
-        height: 468px;
+        height: 246px;
         margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    .monitoring {
+      &-list {
+        margin-bottom: 3rem;
+      }
+      
+      &-btn {
+        &__wrap {
+          padding: 0 1rem;
+          margin-bottom: 3rem;
+        }
+      }
+
+      &-iframe {
+
+        &__wrap {
+          height: 468px;
+        }
       }
     }
   }

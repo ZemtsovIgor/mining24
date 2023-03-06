@@ -5,7 +5,7 @@ export const FooterComponent:any = styled('footer')`
   
   .footer {
     &__logo {
-      margin-bottom: 0.7rem;
+      margin-bottom: 1rem;
     }
     
     &-menu {
@@ -20,7 +20,8 @@ export const FooterComponent:any = styled('footer')`
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
+        text-align: center;
 
         & .link {
           font-weight: 400;
@@ -37,6 +38,20 @@ export const FooterComponent:any = styled('footer')`
     &-social {
       justify-content: center;
       margin-bottom: 3rem;
+    }
+  }
+
+  @media only screen and (min-width: 33.75em) {
+    .footer {
+      &__logo {
+        margin-bottom: 0.7rem;
+      }
+      
+      &-menu {
+        &__list {
+          flex-direction: row;
+        }
+      }
     }
   }
 

@@ -23,8 +23,8 @@ export const HeaderComponent:any = styled('header')`
       position: relative;
       display: inline-block;
       vertical-align: middle;
-      width: 20px;
-      height: 16px;
+      width: 27px;
+      height: 19px;
       background: 0 0;
       border: 0;
       cursor: pointer;
@@ -39,9 +39,9 @@ export const HeaderComponent:any = styled('header')`
         left: 0;
         display: block;
         width: 100%;
-        height: 2px;
+        height: 3px;
         background: #060931;
-        box-shadow: 0 7px 0 #060931, 0 14px 0 #060931;
+        box-shadow: 0 8px 0 #060931, 0 16px 0 #060931;
         content: '';
       }
     }
@@ -102,7 +102,7 @@ export const HeaderComponent:any = styled('header')`
 
     &__logo {
       width: 7rem;
-      height: 4.375rem;
+      height: 3rem;
       
       &-link {
         display: flex;
@@ -319,6 +319,15 @@ export const HeaderComponent:any = styled('header')`
     .menu {
       .services-panel {
         width: 53rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    .navigation {
+      &__logo {
+        width: 7rem;
+        height: 4.375rem;
       }
     }
   }

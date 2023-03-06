@@ -261,7 +261,7 @@ export default function Home() {
         <section className="main-slide">
           <div className="grid-container">
             <div className="cell grid-x align-middle">
-              <div className="cell small-12 medium-6 left-side">
+              <div className="cell small-12 large-6 left-side">
                 <h1 className="h1">Fast and easy <span className="text-green">Crypto mining</span> contracts for everyone</h1>
                 <div className="btns">
                   <div className="btn-wrap">
@@ -289,7 +289,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="cell small-12 medium-5 large-4 xlarge-6 medium-offset-1 large-offset-2 xlarge-offset-0 right-side">
+              <div className="cell small-12 large-5 xlarge-6 large-offset-1 xlarge-offset-0 right-side">
                 <div className="animation-wrap">
                   <img className="animation" src="/staticfiles/images/phone.png" alt="phone" />
                 </div>

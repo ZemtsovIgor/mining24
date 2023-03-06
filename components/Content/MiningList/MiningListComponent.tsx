@@ -7,7 +7,7 @@ export const MiningListComponent:any = styled('div')`
         list-style: none;
         display: block;
         position: relative;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
       }
       
       &-item {
@@ -51,6 +51,16 @@ export const MiningListComponent:any = styled('div')`
       font-weight: 700;
       font-size: 18px;
       line-height: 24px;
+    }
+  }
+
+  @media only screen and (min-width: 48em) {
+    .miningList {
+      &__content {
+        &-list {
+          margin-bottom: 3rem;
+        }
+      }
     }
   }
 
