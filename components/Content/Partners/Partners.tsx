@@ -11,8 +11,8 @@ export default function Partners({ data }:any) {
             <div className="partners-container">
               <div className="partners-wrap">
                 {
-                  data.list.map((item:any) => (
-                    <div className="partners-item">
+                  data.list.map((item:any, index: number) => (
+                    <div key={`partners-${index + 1}`} className="partners-item">
                       <img
                         className="partners-image"
                         src={item.image.src}

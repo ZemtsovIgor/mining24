@@ -93,38 +93,38 @@ export const MainSlideComponent:any = styled('section')`
   @media only screen and (min-width: 74.9375em) { //1200px
     &.main-slide {
       margin-bottom: 5rem;
-    }
 
-    .main-slide .right-side {
-      display: flex;
-      align-items: flex-end;
-      margin-top: 11.5rem;
-    }
-
-    .main-slide .right-side .animation {
-      &-wrap {
-        margin-right: 1.2rem;
-        margin-left: 3.1rem;
+      & .right-side {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 11.5rem;
+        
+        & .animation {
+          &-wrap {
+            margin-right: 1.2rem;
+            margin-left: 3.1rem;
+          }
+        }
       }
-    }
+      
+      & .left-side {
+        margin-top: 11.5rem;
 
-    .main-slide .left-side {
-      margin-top: 11.5rem;
-
-      .h1 {
-        margin-bottom: 3.5rem;
+        .h1 {
+          margin-bottom: 3.5rem;
+        }
       }
-    }
+      
+      & .btns {
+        margin-bottom: 1rem;
 
-    .main-slide .left-side .btns {
-      margin-bottom: 1rem;
+        .btn {
+          font-size: 18px;
+          line-height: 24px;
+          padding: 20px 32px;
+        }
 
-      .btn {
-        font-size: 18px;
-        line-height: 24px;
-        padding: 20px 32px;
       }
-
     }
   }
 `;

@@ -162,7 +162,7 @@ $(document).ready(function() {
     set: [2],
     tooltip: false,
     onChange: function (vals) {
-      console.log('onChange', vals);
+      // console.log('onChange', vals);
     }
   });
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
     set: [4],
     tooltip: false,
     onChange: function (vals) {
-      console.log('onChange', vals);
+      // console.log('onChange', vals);
     }
   });
 
@@ -184,7 +184,7 @@ $(document).ready(function() {
     set: [3],
     tooltip: false,
     onChange: function (vals) {
-      console.log('onChange', vals);
+      // console.log('onChange', vals);
     }
   });
 

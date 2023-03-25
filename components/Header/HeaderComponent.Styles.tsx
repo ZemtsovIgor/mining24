@@ -7,7 +7,7 @@ export const HeaderComponent:any = styled('header')`
   width: 100vw;
   
   &.-scrolled {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
   }
 
   section {
