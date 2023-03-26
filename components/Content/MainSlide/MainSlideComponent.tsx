@@ -101,8 +101,8 @@ export const MainSlideComponent:any = styled('section')`
         
         & .animation {
           &-wrap {
-            margin-right: 1.2rem;
-            margin-left: 3.1rem;
+            margin-right: 2.3rem;
+            margin-left: 9.4rem;
           }
         }
       }
