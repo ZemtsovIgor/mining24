@@ -1,17 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { HeaderComponent } from './HeaderComponent.Styles';
 import {PATHS} from "../../constants/paths.constants";
 import {LOCALE_CODES, LOCALES} from "../../constants/locales.constants";
 import LinkComponent from "../Link/Link";
-import languageDetector from '../../lib/languageDetector'
-import i18nextConfig from "../../next-i18next.config";
 
-export default function Header() {
-  const router = useRouter();
-  const loc: any = router.query.locale || i18nextConfig.i18n.defaultLocale
-  console.log('currentLocale', loc);
-
+export default function Header({locale}: {locale: string}) {
   return (
     <HeaderComponent>
       <div className="grid-container">
@@ -43,8 +36,8 @@ export default function Header() {
               <ul className="menu dropdown" role="menubar">
                 <li role="menuitem" className="navigation-lang">
                   <button className="navigation-lang__btn">
-                    <i className={`navigation-lang__flag -${loc}`} />
-                    <span className="navigation-lang__value">{LOCALES[loc].slug}</span>
+                    <i className={`navigation-lang__flag -${locale}`} />
+                    <span className="navigation-lang__value">{LOCALES[locale].slug}</span>
                     <i className="navigation-lang__arr" />
                   </button>
                   <div role="presentation" className="navigation-lang__tooltip">
@@ -55,12 +48,12 @@ export default function Header() {
                             <li key={code} data-value={LOCALES[code].symbol}>
                               <LinkComponent
                                 className="navigation-lang__tooltip_item"
+                                locale={code}
                                 href={LOCALES[code].path}
-                                onClick={() => languageDetector.cache(code)}
                               >
                                 <i className={`navigation-lang__tooltip_item_flag -${code}`} />
                                 <span className="navigation-lang__tooltip_item_name" >{LOCALES[code].name}</span>
-                                <div className={`navigation-lang__tooltip_item_check ${code === loc ? '-checked' : ''}`} />
+                                <div className={`navigation-lang__tooltip_item_check ${code === locale ? '-checked' : ''}`} />
                               </LinkComponent>
                             </li>
                           ))

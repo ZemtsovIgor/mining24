@@ -1,25 +1,25 @@
-import {CONTENT} from "../constants/content.constants";
-import MainLayout from "../components/Layouts/MainLayout/MainLayout";
+import {CONTENT} from "../../../constants/content.constants";
+import MainLayout from "../../../components/Layouts/MainLayout/MainLayout";
 import Head from "next/head";
-import {GridStyle} from "../styles/grid";
-import {GlobalStyle} from "../styles/global";
-import Header from "../components/Header/Header";
-import MobileMenu from "../components/MobileMenu/MobileMenu";
-import {HomeComponent} from "../styles/homeComponent.Styles";
-import MainSlide from "../components/Content/MainSlide/MainSlide";
-import ChooseYourContract from "../components/Content/ChooseYourContract/ChooseYourContract";
-import Calculator from "../components/Content/Calculator/Calculator";
-import ImageCarousel from "../components/Content/ImageCarousel/ImageCarousel";
-import MiningList from "../components/Content/MiningList/MiningList";
-import Partners from "../components/Content/Partners/Partners";
-import Monitoring from "../components/Content/Monitoring/Monitoring";
-import Reviews from "../components/Content/Reviews/Reviews";
-import Faq from "../components/Content/Faq/Faq";
-import Footer from "../components/Footer/Footer";
+import {GridStyle} from "../../../styles/grid";
+import {GlobalStyle} from "../../../styles/global";
+import Header from "../../../components/Header/Header";
+import MobileMenu from "../../../components/MobileMenu/MobileMenu";
+import {HomeComponent} from "../../../styles/homeComponent.Styles";
+import MainSlide from "../../../components/Content/MainSlide/MainSlide";
+import ChooseYourContract from "../../../components/Content/ChooseYourContract/ChooseYourContract";
+import Calculator from "../../../components/Content/Calculator/Calculator";
+import ImageCarousel from "../../../components/Content/ImageCarousel/ImageCarousel";
+import MiningList from "../../../components/Content/MiningList/MiningList";
+import Partners from "../../../components/Content/Partners/Partners";
+import Monitoring from "../../../components/Content/Monitoring/Monitoring";
+import Reviews from "../../../components/Content/Reviews/Reviews";
+import Faq from "../../../components/Content/Faq/Faq";
+import Footer from "../../../components/Footer/Footer";
 import React from "react";
 
 export default function Home() {
-  const loc: string = 'en'
+  const loc: string = 'ru'
   const static_data:any = CONTENT[loc];
 
   return (

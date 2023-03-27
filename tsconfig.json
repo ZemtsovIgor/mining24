@@ -13,7 +13,8 @@
     "esModuleInterop": true,
     "target": "esnext",
     "lib": [
-      "esnext"
+      "esnext",
+      "dom"
     ],
     "jsx": "preserve",
     "downlevelIteration": true,

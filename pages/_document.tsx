@@ -3,7 +3,6 @@ import Document, { DocumentContext, DocumentInitialProps, Main, NextScript } fro
 import { ServerStyleSheet } from 'styled-components';
 import CleanCSS from 'clean-css';
 import get from 'lodash/get';
-import i18nextConfig from '../next-i18next.config'
 
 interface ReactDocumentInitialProps extends DocumentInitialProps {
   title: ReactElement;
@@ -132,11 +131,11 @@ export default class MyDocument extends Document<ReactDocumentInitialProps> {
   public render(): ReactElement {
     const { title, description, keywords, image, canonicallink, gtagScript, styleTag, gtagNoScript, url } = this.props;
     minifyCss(styleTag);
-    const currentLocale: any = this.props.__NEXT_DATA__.query.locale || i18nextConfig.i18n.defaultLocale
+    // const currentLocale: any = this.props.__NEXT_DATA__.query.locale || i18nextConfig.i18n.defaultLocale
 
     /* eslint-disable react/no-danger */
     return (
-      <html lang={currentLocale}>
+      <html>
         <head>
           {title}
           {description}

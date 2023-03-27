@@ -8,7 +8,7 @@
     "dev": "next",
     "build": "NODE_ENV=production next build",
     "start": "next start",
-    "export": "next export",
+    "export": "NODE_ENV=production next build && next export",
     "lint": "eslint --ext .ts --ext .tsx --ext .js .",
     "format": "prettier --write '**/*.js' '**/*.jsx' '**/*.ts' '**/*.tsx' '**/*.md'",
     "typecheck": "tsc -p ./tsconfig.json --noEmit"

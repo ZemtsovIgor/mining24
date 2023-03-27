@@ -2,13 +2,8 @@ import React from "react";
 import {PATHS} from "../../constants/paths.constants";
 import { MobileMenuComponent } from './MobileMenuComponent.Styles';
 import {LOCALE_CODES, LOCALES} from "../../constants/locales.constants";
-import {useRouter} from "next/router";
-import i18nextConfig from "../../next-i18next.config";
 
-export default function MobileMenu() {
-  const router = useRouter();
-  const loc: any = router.query.locale || i18nextConfig.i18n.defaultLocale
-  console.log('currentLocale', loc);
+export default function MobileMenu({locale}: {locale: string}) {
 
   return (
     <MobileMenuComponent id="mobileMenu" className="off-canvas position-right is-transition-push is-closed">
@@ -31,8 +26,8 @@ export default function MobileMenu() {
         <ul className="dropdown mobile-lang" role="menubar">
           <li role="menuitem" className="navigation-lang" id="mobileNavigationLang">
             <button className="navigation-lang__btn">
-              <i className={`navigation-lang__flag -${loc}`} />
-              <span className="navigation-lang__value">{LOCALES[loc].slug}</span>
+              <i className={`navigation-lang__flag -${locale}`} />
+              <span className="navigation-lang__value">{LOCALES[locale].slug}</span>
               <i className="navigation-lang__arr" />
             </button>
             <div role="presentation" className="navigation-lang__tooltip">
@@ -44,7 +39,7 @@ export default function MobileMenu() {
                         <a className="navigation-lang__tooltip_item" href={LOCALES[code].path}>
                           <i className={`navigation-lang__tooltip_item_flag -${code}`} />
                           <span className="navigation-lang__tooltip_item_name" >{LOCALES[code].name}</span>
-                          <div className={`navigation-lang__tooltip_item_check ${code === loc ? '-checked' : ''}`} />
+                          <div className={`navigation-lang__tooltip_item_check ${code === locale ? '-checked' : ''}`} />
                         </a>
                       </li>
                     ))

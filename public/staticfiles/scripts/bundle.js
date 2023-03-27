@@ -238,4 +238,10 @@ $(document).ready(function() {
   $('#mobileNavigationLang').on('click', function () {
     $(this).toggleClass('-visible');
   });
+
+  // Langs
+  $('.navigation-lang__tooltip_item').on('click', function () {
+    var locale = $(this).attr('locale');
+    window.localStorage.setItem('locale', locale)
+  });
 });
