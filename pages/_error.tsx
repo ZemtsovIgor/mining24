@@ -19,6 +19,8 @@ const data:any = {
 
 export default class Services extends Component {
   render() {
+    const loc: string = 'en'
+
     return (
       <MainLayout>
         <Head>
@@ -28,7 +30,7 @@ export default class Services extends Component {
         </Head>
         <GridStyle/>
         <GlobalStyle/>
-        <Header/>
+        <Header locale={loc}/>
       </MainLayout>
     );
   }
