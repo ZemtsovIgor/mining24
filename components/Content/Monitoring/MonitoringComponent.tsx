@@ -74,7 +74,10 @@ export const MonitoringComponent:any = styled('section')`
       height: 100%;
       background: #F0F6FF;
       border-radius: 8px;
-      
+      background-image: url("/staticfiles/images/chart.png");
+      background-size: contain;
+
+
       &__wrap {
         display: block;
         position: relative;
@@ -144,7 +147,6 @@ export const MonitoringComponent:any = styled('section')`
       }
 
       &-iframe {
-
         &__wrap {
           height: 344px;
           padding: 0;

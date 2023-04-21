@@ -45,7 +45,7 @@ export const MainSlideComponent:any = styled('section')`
       margin-top: 2.5rem;
 
       & .animation {
-        display: block;
+        display: none;
         position: relative;
         width: 100%;
         height: auto;
@@ -82,9 +82,14 @@ export const MainSlideComponent:any = styled('section')`
       .right-side {
         margin-top: 6rem;
 
-        .animation-wrap {
-          padding-left: 0;
-          padding-right: 0;
+        .animation {
+          display: block;
+          
+          &-wrap {
+            padding-left: 0;
+            padding-right: 0;
+          }
+          
         }
       }
     }
