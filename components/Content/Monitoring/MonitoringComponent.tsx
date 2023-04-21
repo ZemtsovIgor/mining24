@@ -76,6 +76,7 @@ export const MonitoringComponent:any = styled('section')`
       border-radius: 8px;
       background-image: url("/staticfiles/images/chart.png");
       background-size: contain;
+      background-repeat: no-repeat;
 
 
       &__wrap {
