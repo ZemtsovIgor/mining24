@@ -35,9 +35,14 @@ export default function MainSlide({ data }:any) {
               </div>
             </div>
           </div>
-          <div className="cell small-12 large-5 xlarge-6 large-offset-1 xlarge-offset-0 right-side">
+          <div className="cell small-12 large-6 xlarge-6 right-side">
             <div className="animation-wrap">
-              <img className="animation" src="/staticfiles/images/phone.png" alt="phone" />
+              <img
+                className="animation"
+                srcSet="/staticfiles/images/tree.png, /staticfiles/images/tree@2x.png 2x"
+                src="/staticfiles/images/tree.png"
+                alt="phone"
+              />
             </div>
             <div className="social hide-for-small -vertical">
               <div className="social-item">

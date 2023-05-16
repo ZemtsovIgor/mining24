@@ -957,7 +957,7 @@ export const GlobalStyle: any = createGlobalStyle`
     }
 
     .social {
-      margin-right: 0rem;
+      margin-right: 0;
       margin-bottom: 2.5rem;
       
       &-item {

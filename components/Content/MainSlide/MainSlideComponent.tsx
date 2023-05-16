@@ -39,13 +39,16 @@ export const MainSlideComponent:any = styled('section')`
           text-align: center;
         }
       }
+      
+      & .social {
+        margin-bottom: 2.5rem;
+      }
     }
 
     & .right-side {
-      margin-top: 2.5rem;
+      position: relative;
 
       & .animation {
-        display: none;
         position: relative;
         width: 100%;
         height: auto;
@@ -66,7 +69,7 @@ export const MainSlideComponent:any = styled('section')`
       margin-bottom: 3.4rem;
 
       .left-side {
-        margin-top: 3rem;
+        margin-top: 9.4rem;
 
         .h1 {
           margin-bottom: 1.5rem;
@@ -80,14 +83,17 @@ export const MainSlideComponent:any = styled('section')`
       }
 
       .right-side {
-        margin-top: 6rem;
+        margin-bottom: 0;
+        margin-top: auto;
 
         .animation {
           display: block;
+          height: 100%;
           
           &-wrap {
             padding-left: 0;
             padding-right: 0;
+            height: 100%;
           }
           
         }
@@ -102,13 +108,20 @@ export const MainSlideComponent:any = styled('section')`
       & .right-side {
         display: flex;
         align-items: flex-end;
-        margin-top: 11.5rem;
+        margin-top: 20rem;
         
         & .animation {
           &-wrap {
-            margin-right: 2.3rem;
-            margin-left: 9.4rem;
+            //margin-right: 2.3rem;
+            //margin-left: 9.4rem;
           }
+        }
+        
+        & .social {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          margin-bottom: 2.3rem;
         }
       }
       
