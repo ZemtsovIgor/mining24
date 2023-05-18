@@ -85,6 +85,65 @@ export const CalculatorComponent:any = styled('section')`
       top: 0;
       transition: all 0.1s linear;
       width: 32px;
+
+      .rs-tooltip {
+        text-transform: none;
+        font-size: .9em;
+        line-height: 1;
+        user-select: none;
+        pointer-events: none;
+        position: absolute;
+        display: none;
+        opacity: 0;
+
+        text-align: center;
+        font-weight: 500;
+        color: #ffffff;
+        min-width: 3em;
+        max-width: 21em;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 1ch 1.5ch;
+        border-radius: .3ch;
+        box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+        background: #333;
+        z-index: 1000;
+
+        bottom: calc(100% + 14px);
+        left: 50%;
+        transform: translate(-50%, -.5em);
+
+        &:before {
+          content: '';
+          border: 5px solid transparent;
+          z-index: 1001;
+          text-transform: none;
+          font-size: .9em;
+          line-height: 1;
+          user-select: none;
+          pointer-events: none;
+          position: absolute;
+          display: none;
+          opacity: 0;
+          bottom: -5px;
+          border-bottom-width: 0;
+          border-top-color: #333;
+          left: 50%;
+          transform: translate(-50%, -.5em);
+        }
+      }
+
+      &:hover {
+        .rs-tooltip {
+          display: block;
+          animation: tooltips-vert 300ms ease-out forwards;
+
+          &:before {
+            display: block;
+            animation: tooltips-vert 300ms ease-out forwards;
+          }
+        }
+      }
     }
 
     .sliding .rs-pointer,
@@ -94,6 +153,13 @@ export const CalculatorComponent:any = styled('section')`
 
     .rs-scale {
       display: none;
+    }
+  }
+
+  @keyframes tooltips-vert {
+    to {
+      opacity: .9;
+      transform: translate(-50%, 0);
     }
   }
 
@@ -124,6 +190,8 @@ export const CalculatorComponent:any = styled('section')`
       margin-right: 6px;
       
       &-line {
+        display: flex;
+        justify-content: space-between;
         margin-bottom: 0.5rem;
       }
 
@@ -267,7 +335,7 @@ export const CalculatorComponent:any = styled('section')`
         
         &_percent {
           font-weight: 600;
-          font-size: 20px;
+          font-size: 14px;
           line-height: 28px;
           color: #060931;
         }
@@ -380,6 +448,11 @@ export const CalculatorComponent:any = styled('section')`
       font-weight: 700;
       font-size: 18px;
       line-height: 24px;
+      
+      &-wrap {
+        display: flex;
+        margin-top: 2.2rem;
+      }
     }
   }
 
@@ -429,9 +502,9 @@ export const CalculatorComponent:any = styled('section')`
       }
       
       &__wrap {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        //flex-direction: row;
+        //justify-content: space-between;
+        //align-items: center;
       }
       
       &__item {

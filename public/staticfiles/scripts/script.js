@@ -145,12 +145,48 @@ $(document).ready(function() {
     }
   };
 
+  // Calculator
+  var power_min = 3.6;
+  var power_max = 55;
+  var power_step = 0.1; // const
+  var duration_min = 1;
+  var duration_max = 24;
+  var duration_step = 1; // const
+  var btc_price_min = 48000;
+  var btc_price_max = 160000;
+  var btc_price_step = 100; // const
+  var th_price = 55;
+  var mined_per_th_monthly = 0.00008737864078;
+  var bonus_k = 0.5;
+
+  function valuesRange(start, stop, step) {
+    return Array.from(
+      { length: (stop - start) / step + 1 },
+      function(value, index) {
+        return start + index * step
+      }
+    );
+  }
+
+  var power_values = valuesRange(power_min, power_max, power_step);
+  console.log('power_values', power_values)
+
+  var duration_values = valuesRange(duration_min, duration_max, duration_step);
+  console.log('duration_values', duration_values)
+
+  var btc_price_values = valuesRange(btc_price_min, btc_price_max, btc_price_step);
+  console.log('btc_price_values', btc_price_values)
+
+  var power = 7;
+  var duration = 24;
+  var btc_price = 68000;
+
   // Range sliders
   new rSlider({
     target: '#power_rangeSlider',
-    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    values: power_values,
     range: false,
-    set: [2],
+    set: [power],
     tooltip: false,
     onChange: function (vals) {
       console.log('onChange', vals);
@@ -159,9 +195,9 @@ $(document).ready(function() {
 
   new rSlider({
     target: '#duration_rangeSlider',
-    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    values: duration_values,
     range: false,
-    set: [4],
+    set: [duration],
     tooltip: false,
     onChange: function (vals) {
       console.log('onChange', vals);
@@ -170,9 +206,9 @@ $(document).ready(function() {
 
   new rSlider({
     target: '#forecast_rangeSlider',
-    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    values: btc_price_values,
     range: false,
-    set: [3],
+    set: [btc_price],
     tooltip: false,
     onChange: function (vals) {
       console.log('onChange', vals);

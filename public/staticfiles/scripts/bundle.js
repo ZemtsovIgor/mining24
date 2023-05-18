@@ -154,37 +154,105 @@ $(document).ready(function() {
     }
   };
 
+  // Calculator
+  var power_min = 3.6;
+  var power_max = 55;
+  var power_step = 0.1; // const
+  var duration_min = 1;
+  var duration_max = 24;
+  var duration_step = 1; // const
+  var btc_price_min = 48000;
+  var btc_price_max = 160000;
+  var btc_price_step = 100; // const
+  var th_price = 55;
+  var mined_per_th_monthly = 0.00008737864078;
+  var bonus_k = 0.5;
+
+  function valuesRange(start, stop, step, fixed) {
+    return Array.from(
+      { length: (stop - start) / step + 1 },
+      function(value, index) {
+        return (start + index * step).toFixed(fixed)
+      }
+    );
+  }
+
+  var power_values = valuesRange(power_min, power_max, power_step, 1).map(function(val) {
+    return Number(val)
+  });
+
+  var duration_values = valuesRange(duration_min, duration_max, duration_step, 0).map(function(val) {
+    return Number(val)
+  });
+
+  var btc_price_values = valuesRange(btc_price_min, btc_price_max, btc_price_step, 0).map(function(val) {
+    return Number(val)
+  });
+
+  var power = 7;
+  var duration = 24;
+  var btc_price = 68000;
+
+  function updateCalc(new_power, new_duration, new_btc_price) {
+    power = new_power ? Number(new_power) : power;
+    duration = new_duration ? Number(new_duration) : duration;
+    btc_price = new_btc_price ? Number(new_btc_price) : btc_price;
+
+    var ths_bonus = power / (power_max - power_min);
+    var invested = power * th_price;
+    var income = mined_per_th_monthly * (power + ths_bonus) * duration * btc_price;
+    var contract_profit = ((income - invested) / invested) * (1 + ths_bonus) * bonus_k * 100;
+    var total_btc = mined_per_th_monthly * (power + ths_bonus) * duration;
+    var monthly_mining = mined_per_th_monthly * (power + ths_bonus);
+    var annually_mining = mined_per_th_monthly * (power + ths_bonus) * 12;
+    var total_mining = mined_per_th_monthly * (power + ths_bonus) * duration;
+
+    $('#ths_power').text(`${power} TH/s`);
+    $('#ths_bonus').text(`+${ths_bonus.toFixed(2).replace(/\.?0+$/, '')} TH/s BONUS`);
+    $('#invested').text(`Invested: ${invested} USD`);
+    $('#income').text(`Total Profit: ${income.toFixed(2).replace(/\.?0+$/, '')} USD`);
+    $('#contract_profit').text(`Contract Profit: ${contract_profit.toFixed(2).replace(/\.?0+$/, '')}%`);
+    $('#contract_profit_percent').text(`${contract_profit.toFixed(2).replace(/\.?0+$/, '')}%`);
+    $('#total_usd').text(`Total: ${income.toFixed(2).replace(/\.?0+$/, '')} USD (${total_btc.toFixed(8).replace(/\.?0+$/, '')} BTC)`);
+    $('#monthly_mining').text(`${monthly_mining.toFixed(8).replace(/\.?0+$/, '')} BTC`);
+    $('#annually_mining').text(`${annually_mining.toFixed(8).replace(/\.?0+$/, '')} BTC`);
+    $('#total_mining').text(`${total_mining.toFixed(8).replace(/\.?0+$/, '')} BTC`);
+
+  }
+
+  updateCalc(power, duration, btc_price);
+
   // Range sliders
   new rSlider({
     target: '#power_rangeSlider',
-    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    values: power_values,
     range: false,
-    set: [2],
-    tooltip: false,
+    set: [power],
+    tooltip: true,
     onChange: function (vals) {
-      // console.log('onChange', vals);
+      updateCalc(vals)
     }
   });
 
   new rSlider({
     target: '#duration_rangeSlider',
-    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    values: duration_values,
     range: false,
-    set: [4],
-    tooltip: false,
+    set: [duration],
+    tooltip: true,
     onChange: function (vals) {
-      // console.log('onChange', vals);
+      updateCalc(null, vals);
     }
   });
 
   new rSlider({
     target: '#forecast_rangeSlider',
-    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    values: btc_price_values,
     range: false,
-    set: [3],
-    tooltip: false,
+    set: [btc_price],
+    tooltip: true,
     onChange: function (vals) {
-      // console.log('onChange', vals);
+      updateCalc(null, null, vals);
     }
   });
 
