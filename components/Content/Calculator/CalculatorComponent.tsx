@@ -93,9 +93,10 @@ export const CalculatorComponent:any = styled('section')`
         user-select: none;
         pointer-events: none;
         position: absolute;
-        display: none;
-        opacity: 0;
-
+        display: block;
+        //opacity: 0;
+        opacity: .9;
+        
         text-align: center;
         font-weight: 500;
         color: #ffffff;
@@ -103,15 +104,17 @@ export const CalculatorComponent:any = styled('section')`
         max-width: 21em;
         white-space: nowrap;
         text-overflow: ellipsis;
-        padding: 1ch 1.5ch;
+        padding: 5px;
         border-radius: .3ch;
         box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
         background: #333;
         z-index: 1000;
 
-        bottom: calc(100% + 14px);
+        //bottom: calc(100% + 14px);
+        bottom: -39px;
         left: 50%;
-        transform: translate(-50%, -.5em);
+        //transform: translate(-50%, -.5em);
+        transform: translate(-50%, 0);
 
         &:before {
           content: '';
@@ -123,13 +126,16 @@ export const CalculatorComponent:any = styled('section')`
           user-select: none;
           pointer-events: none;
           position: absolute;
-          display: none;
-          opacity: 0;
-          bottom: -5px;
-          border-bottom-width: 0;
-          border-top-color: #333;
+          display: block;
+          //opacity: 0;
+          opacity: .9;
+          //bottom: -5px;
+          bottom: 100%;
+          border-top-width: 0;
+          border-bottom-color: #333;
           left: 50%;
-          transform: translate(-50%, -.5em);
+          //transform: translate(-50%, -.5em);
+          transform: translate(-50%, 0);
         }
       }
 
@@ -179,7 +185,8 @@ export const CalculatorComponent:any = styled('section')`
     
     &__wrap {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
     }
     
     &__item {
@@ -478,7 +485,7 @@ export const CalculatorComponent:any = styled('section')`
     .sliders {
       padding: 0 0.5rem 0 3rem;
       margin-top: 2.2rem;
-      margin-bottom: 4rem;
+      //margin-bottom: 4rem;
     }
 
     .sliders__item-title_wrap {
@@ -493,8 +500,8 @@ export const CalculatorComponent:any = styled('section')`
       padding: 0 0 0 3rem;
       
       &__title {
-        font-size: 24px;
-        line-height: 32px;
+        //font-size: 24px;
+        //line-height: 32px;
         
         &-wrap {
           margin-bottom: 2rem;

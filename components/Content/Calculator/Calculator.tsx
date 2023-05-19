@@ -45,20 +45,29 @@ export default function Calculator({ data }:any) {
               {/*  <span className="compare__title">For the same price: 450 USD</span>*/}
               {/*</div>*/}
               <div className="compare__wrap">
-                <div className="total__details-body">
+                <div className="compare__item-wrap">
                   <div className="compare__item-line">
                     <span className="compare__item" >Monthly mining</span>
-                    <span className="compare__title" id="monthly_mining">0 BTC</span>
                   </div>
                   <div className="compare__item-line">
                     <span className="compare__item">Total mining</span>
-                    <span className="compare__title" id="annually_mining">0 BTC</span>
                   </div>
                   <div className="compare__item-line">
                     <span className="compare__item">Annually mining</span>
+                  </div>
+                </div>
+                <div className="compare__item-wrap">
+                  <div className="compare__item-line">
+                    <span className="compare__title" id="monthly_mining">0 BTC</span>
+                  </div>
+                  <div className="compare__item-line">
+                    <span className="compare__title" id="annually_mining">0 BTC</span>
+                  </div>
+                  <div className="compare__item-line">
                     <span className="compare__title" id="total_mining">0 BTC</span>
                   </div>
                 </div>
+
                 {/*<div className="compare__item-wrap">*/}
                 {/*  <div className="compare__item-line">*/}
                 {/*    <span className="compare__item">You can buy:</span>*/}
