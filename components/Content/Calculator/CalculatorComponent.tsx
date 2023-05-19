@@ -173,10 +173,13 @@ export const CalculatorComponent:any = styled('section')`
     padding: 0 1rem;
     
     &__title {
+      font-family: "Cousine", sans-serif;
+      width: 100%;
       font-weight: 700;
       font-size: 16px;
       line-height: 24px;
       color: #060931;
+      text-align: right;
 
       &-wrap {
         margin-bottom: 1.25rem;

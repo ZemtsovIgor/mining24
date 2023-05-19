@@ -49,6 +49,18 @@ export const GlobalStyle: any = createGlobalStyle`
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'Cousine';
+    src: url('/staticfiles/fonts/Cousine/Cousine-Bold.eot');
+    src: local('Cousine Bold'), local('Cousine-Bold'),
+    url('/staticfiles/fonts/Cousine/Cousine-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/staticfiles/fonts/Cousine/Cousine-Bold.woff') format('woff'),
+    url('/staticfiles/fonts/Cousine/Cousine-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
   * {
     font-family: "Montserrat", Helvetica, Roboto, Arial, sans-serif;
     font-style: normal;

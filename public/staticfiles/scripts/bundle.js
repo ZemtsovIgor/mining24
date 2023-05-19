@@ -576,9 +576,9 @@ $(document).ready(function() {
     $('#contract_profit').text(`Contract Profit: ${contract_profit.toFixed(2).replace(/\.?0+$/, '')}%`);
     $('#contract_profit_percent').text(`${contract_profit.toFixed(2).replace(/\.?0+$/, '')}%`);
     $('#total_usd').text(`Total: ${income.toFixed(2).replace(/\.?0+$/, '')} USD (${total_btc.toFixed(8).replace(/\.?0+$/, '')} BTC)`);
-    $('#monthly_mining').text(`${monthly_mining.toFixed(8).replace(/\.?0+$/, '')} BTC`);
-    $('#annually_mining').text(`${annually_mining.toFixed(8).replace(/\.?0+$/, '')} BTC`);
-    $('#total_mining').text(`${total_mining.toFixed(8).replace(/\.?0+$/, '')} BTC`);
+    $('#monthly_mining').text(`${monthly_mining.toFixed(8)} BTC`);
+    $('#annually_mining').text(`${annually_mining.toFixed(8)} BTC`);
+    $('#total_mining').text(`${total_mining.toFixed(8)} BTC`);
 
   }
 
